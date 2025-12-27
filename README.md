@@ -46,9 +46,9 @@ Just a modern browser (Chrome, Firefox, Edge, Safari)
 Simply double-click index.html or open it with your browser
 
 ###  Tech Stack
-HTML5 – Semantic markup & accessibility
-CSS3 – Custom properties, Flexbox, Grid, glassmorphism
-JavaScript (ES6+) – Calculation logic, keyboard events, DOM magic
+- HTML5 (Semantic markup & accessibility)
+- CSS3 (Custom properties, Flexbox, Grid, glassmorphism)
+- JavaScript (ES6+) (Calculation logic, keyboard events, DOM magic)
 
 ### Screenshot
 <img width="1366" height="640" alt="Screenshot (609)" src="https://github.com/user-attachments/assets/b9b3a5c7-3fb6-4e7d-992d-2730a55d4136" />
@@ -61,6 +61,7 @@ JavaScript (ES6+) – Calculation logic, keyboard events, DOM magic
    
    
   
+
 
 
 
