@@ -1,0 +1,141 @@
+:root{
+  --bg:#fffaf5; /* Hello Kitty soft cream background */
+  --calc-bg:#ffd4e5; /* Hello Kitty soft pink panel */
+  --btn:#ffebf0; /* Hello Kitty very soft pink buttons */
+  --accent:#ff99c8; /* Hello Kitty sweet pink accent */
+  --text:#6b4a5c; /* soft dark plum text */
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+
+  background-image: url("images/cute-bg.jpg"); /* <-- your image path */
+  background-size: cover;       /* fill screen */
+  background-position: center;  /* center image */
+  background-repeat: no-repeat; /* no tiling */
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+.calculator{
+  width:360px;
+  max-width:96vw;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+
+  border-radius:24px;
+  border:1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 12px 30px rgba(255, 105, 180, 0.25),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+
+  padding:20px;
+}
+
+.display{
+  background:rgba(255,255,255,0.6);
+  color:var(--text);
+  font-size:clamp(1.6rem,4vw,3rem);
+  padding:18px;
+  border-radius:16px;
+  text-align:right;
+  min-height:56px;
+  margin-bottom:16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+  box-shadow:inset 0 4px 12px rgba(0,0,0,0.03);
+}
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.btn{
+  background:linear-gradient(135deg,rgba(255,235,240,0.5),rgba(255,220,235,0.3));
+  border:1.5px solid rgba(255,200,220,0.4);
+  padding:0;
+  aspect-ratio:1/1;
+  width:100%;
+  height:auto;
+  font-size:clamp(0.9rem,2.5vw,1.1rem);
+  border-radius:50%;
+  cursor:pointer;
+  box-shadow:0 8px 24px rgba(255,105,180,0.15);
+  backdrop-filter:blur(8px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+  transition:all 0.2s ease;
+}
+.btn.spacer{background:transparent;border:0;box-shadow:none;pointer-events:none}
+.btn.spacer:active{transform:none}
+.btn:active{transform:translateY(1px)}
+/* Larger font for number buttons 0-9 */
+.btn[data-value="0"],
+.btn[data-value="1"],
+.btn[data-value="2"],
+.btn[data-value="3"],
+.btn[data-value="4"],
+.btn[data-value="5"],
+.btn[data-value="6"],
+.btn[data-value="7"],
+.btn[data-value="8"],
+.btn[data-value="9"]{
+  font-size:clamp(1.2rem,3.2vw,1.4rem);
+  font-weight:500;
+}
+.btn-ac{background:linear-gradient(135deg,#ffb3d9,#ff99c8);color:#6b4a5c;font-weight:600}
+.btn-eq{background:linear-gradient(135deg,#ff99c8,#ff7fa0);color:#ffffff;font-weight:600;font-size:clamp(1.1rem,3vw,1.3rem)}
+/* Pastel yellow for operator buttons: back, /, *, -, +, % */
+.btn[data-action="back"],
+.btn[data-value="/"],
+.btn[data-value="*"],
+.btn[data-value="-"],
+.btn[data-value="+"],
+.btn[data-value="%"]{
+  background:linear-gradient(135deg,#fffbdf,#fff5c2);
+  color:#6b4a5c;
+  font-weight:600;
+  font-size:clamp(1.1rem,3vw,1.3rem);
+}
+
+.btn[disabled]{opacity:0.6;cursor:default}
+
+.preview{
+  color:rgba(107,74,92,0.5);
+  font-size:0.9rem;
+  text-align:right;
+  min-height:18px;
+  margin-bottom:6px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+}
+
+@media (max-width:420px){
+  .calculator{width:320px}
+  .display{font-size:1.6rem}
+}
+
+@media (max-width:360px){
+  .calculator{width:280px}
+  .display{
+    font-size:1.4rem;
+    padding:14px;
+    min-height:48px;
+  }
+  .btn{font-size:0.95rem}
+  /* Make the AC button slightly smaller on very small screens */
+  .btn-ac{
+    font-size:0.82rem;
+  }
+}
