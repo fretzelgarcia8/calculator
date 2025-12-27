@@ -65,3 +65,4 @@ Backspace	Delete last character
 Escape	Clear all (AC)
 📝 License
 This project is not licensed and is provided for educational purposes only.
+
