@@ -6,7 +6,7 @@ Soft pink & cream palette · backdrop-filter magic · real-time preview display
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Interface & Design
 - Glassmorphism UI with **backdrop-filter** blur + soft shadows
@@ -28,7 +28,7 @@ Soft pink & cream palette · backdrop-filter magic · real-time preview display
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 Just a modern browser (Chrome, Firefox, Edge, Safari)
@@ -61,6 +61,7 @@ Simply double-click index.html or open it with your browser
    
    
   
+
 
 
 
